@@ -160,6 +160,7 @@ def download_video(url: str, directory: Path):
     options = {
         "format": "bestvideo+bestaudio/best",
         "format_sort": ["res", "fps"],
+        "js_runtimes": {"node": {}},
         "outtmpl": str(directory / "source.%(ext)s"),
         "merge_output_format": "mkv",
         "noplaylist": True,
